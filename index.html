@@ -209,7 +209,7 @@ function ytPlay(){ytOk=false;try{yt.seekTo(0);yt.playVideo()}catch(e){}
  setTimeout(function(){if(!ytOk){var d=document.getElementById("ytbox");if(d)d.style.cssText="position:fixed;left:50%;bottom:60px;margin-left:-100px;width:200px;height:113px;z-index:99999";var k=document.getElementById("ytskip");if(!k){k=document.createElement("button");k.id="ytskip";k.className="btn";k.setAttribute("data-act","skipoff");k.textContent="Skip sound";document.body.appendChild(k)}k.style.cssText="position:fixed;left:50%;bottom:20px;margin-left:-50px;width:100px;z-index:99999;display:block"}},1500)}
 function shutSound(){ytWant=true;if(!yt)ytInit();else if(ytReady)ytPlay()}
 var ytStart=false,offPend=false,ytT1=0,ytT2=0;
-function offNow(){clearTimeout(ytT1);clearTimeout(ytT2);if(!offPend)return;offPend=false;ytHide();off("<div>It's now safe to turn off<br>your computer.<br><br><small>Jump scare intentional.</small><br><br><small>(tap to turn it back on)</small></div>")}
+function offNow(){clearTimeout(ytT1);clearTimeout(ytT2);if(!offPend)return;offPend=false;ytHide();off("<div>It's now safe to turn off<br>your computer.<br><br><small>(tap to turn it back on)</small></div>")}
 function offWait(){offPend=true;ytStart=false}
 function off(h){var o=$("off");o.innerHTML=h;o.style.display="flex"}
 var yt2=null,pl2=false,plT=0,plShown=false,plWant=false,plInit0=false;
